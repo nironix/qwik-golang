@@ -1,0 +1,17 @@
+go run <filename>.go
+go install <url>
+go buid <fn>.go  -> creates .exe file
+package main -> to initialize
+import "fmt" -> stores input & output 
+func main() -> main function - first to execute
+fmt.println("dsd")-> print
+// ->command
+mod file ->  contains modules used
+import( mods ) imports modules
+
+x:=1 -> assign 
+reflect.TypeOf(x) -> returns type of variable
+
+var <var_name> <datatype> = value  =>global
+
+a,b,_ :=1,2,3
