@@ -1,0 +1,7 @@
+Features of GoLang
+-> platform independent - we can run code created by different developers on different systems.
+-> concurrency - we can run process parallelly
+
+Case Studies
+-> GoLang is preferred as most of the software used in Hosting and Running such as kubernetes and Docker are written in GoLang, Which provides ease of usage.
+-> Many(American Express) prefer GoLang for its concurrency and its fast execution to process its transaction faster.
