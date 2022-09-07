@@ -10,4 +10,32 @@ int, float32/64, string, bool, complex
 fmt.Printf("%T", k)//prints data type 
 
 type newt int // type <name> <datatype>  =>create a userdefined name for datatype
-
+const // similar to static
+str1 + str2 //concat string
+
+-----operators------
+relational,logical,bitwise,assignment
+
+
+assignment:
+1. Using the short declaration operator, ASSIGN these VALUES to VARIABLES with the IDENTIFIERS “x” and “y” and “z”.
+Print the values stored in those variables using
+ a. single print statement
+ b. multiple print statements
+ c. Print the data type for each variable.
+
+2. Using the “var” keyword, create a VARIABLE with the IDENTIFIER “y”. The variable should be of the UNDERLYING TYPE of your custom TYPE “x”.
+ a. Print out the value of the variable “x”
+ b. Print out the type of the variable “x”
+ c. Assign your own VALUE to the VARIABLE “x” using the “=” OPERATOR.
+ d. Print out the value of the variable “x”
+
+3. Write go code to do Fundamental operations using following any 3 for each OPERATORS
+ a. Arithmetic Operators.
+ b. Relational Operators
+ c. Logical Operators
+ d. Assignment Operators
+
+4. Write go code to SWAP 2 variables using short declaration operator.
+
+ 
