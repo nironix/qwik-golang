@@ -1,3 +1,16 @@
+GITHUB:
+
+git clone "url" => to access repository
+
+
+git add .  => to add unsaved 
+git status  => to view the unsaved changes
+git commit -m "comment"  => to commit the changes with a comment
+git push => to push all the commited stuff to repositary
+
+
+GO:
+
 go run <filename>.go
 go install <url>
 go buid <fn>.go  -> creates .exe file
@@ -8,10 +21,11 @@ fmt.println("dsd")-> print
 // ->command
 mod file ->  contains modules used
 import( mods ) imports modules
-
-x:=1 -> assign 
+go env 
+x:=1 -> assign (shorthand decleration)
 reflect.TypeOf(x) -> returns type of variable
 
 var <var_name> <datatype> = value  =>global
 
 a,b,_ :=1,2,3
+

@@ -1,0 +1,13 @@
+Keywords : break , func , go , range , etc....
+defer -> deallocating memory
+default value: 
+	int = 0
+	bool = false
+	string = empty (nothing)
+data types:
+int, float32/64, string, bool, complex
+
+fmt.Printf("%T", k)//prints data type 
+
+type newt int // type <name> <datatype>  =>create a userdefined name for datatype
+
