@@ -1,0 +1,53 @@
+-> type casting / conversion
+-> supports explicit conversion
+
+i, _ := strconv.ParseInt(str, 0, 64)//string to int
+i, _ := strconv.ParseFloat(str, 0)//string to Float
+
+=> if condition
+
+=>for loop
+
+-> for init,cond,incr{.....}
+-> for{.....} //infinite loop
+-> for cond {.....} //while loop
+->for i,j := range,rvariable{.....} //traverse through an array,etc
+
+=> Loop control : break ; goto ; continue
+
+=> switch optstatement;optexpr{
+	case exp1 : statement
+	case exp2 : statement
+	case exp3 : statement
+	...
+	default : statement }
+	//type 2
+	switch optstatement;typeswitchexp{
+	case typelist1 : statement
+	case typelist2 : statement
+	case typelist3 : statement
+	...
+	default : statement }
+	
+	}
+
+=>goto key /////  key :
+
+
+ASSIGNMENT
+
+1. Declare 2 variable of type INT and find the average of 2 INT numbers and return as FLOAT32 value
+a) Print value and type of 2 variable.
+b) Do explicit type conversion and print the average and type of output.
+2. Using Decision making statements
+a) Check if the 2 variable of type INT is divisible by each other. (Only if)
+b) Check if the variable of type INT is even or odd. (If else)
+c) Check if the 2 variable of type INT is greater than 200 and print output. (Nested if)
+d) Take an input of type INT from user and Print the grades of Students. (If else ladder)
+3. Using Loops
+a) Take an input of type INT from user and Print the numbers divisible by that input btw 1-50.(Simple for)
+b) Take an input of type INT from user and add 50 to each number and print the output. (For with condition)
+c) Declare 3 numbers inside INT array, add each element of array to each other. (Range for loop)
+4. Switch Statements
+a) Take an input of type INT from user and Print the Day of week according to input.(Switch case)
+b) Take an input of type INT from user and Print if person is eligible for voting.(Goto statement)
