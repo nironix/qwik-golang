@@ -1,0 +1,33 @@
+==>FUNCTIONS
+
+func fname(params)(return types){
+	//function body
+}
+
+=>types
+	-> variadis -  varying number of arguments //similar to overloading by no of args
+	-> anonymous - doesn't have a name
+	-> main 
+	-> init - to initialise the code
+	->method
+
+METHOD
+x:=numval(10)
+y:=numval(10)
+res:=x.multi(y)
+
+func(reciver_name Type) method_name(parameter_list)(return_type){
+// Code
+}
+
+
+POINTERS
+  => var x *int // to store the address/pointer(*)
+  => x=&<var name> //assign address(&)
+  
+ ASSIGNMENT
+1) Write a variadic function to accept INT values and return sum of all INT values as output. hint - Use for with range condition to add each value.
+2) Write a function to return factorial of a number INT accepted from User.
+3) Write a single function to return Area of square and area of rectnagle.
+4) Execute multiplication of 2 numbers using Method call.
+5) Write a program that can swap two integers using pointers.

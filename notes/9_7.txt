@@ -1,9 +1,10 @@
 Keywords (25) : break , func , go , range , etc....
 defer -> deallocating memory
 default value: 
-	int = 0
+	int,float = 0
 	bool = false
 	string = empty (nothing)
+	pointer(*int)=<nil>
 data types:
 int, float32/64, string, bool, complex
 
