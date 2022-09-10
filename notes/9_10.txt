@@ -1,0 +1,12 @@
+=>ARRAY
+arr := [len]<type>{1,2,3,...}
+
+var arr_name[len]type
+len(arr)//length
+
+
+var s = make([]int, 3)
+n := copy(s, arr)
+
+sort.Ints(arr)//sorting an array
+bytes.Trim([]byte(str),"-") //remove "-" from the string at begining and ending

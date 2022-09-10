@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+type numval int
+
 func main() {
 
 	fmt.Println("---q1---")
@@ -25,6 +27,12 @@ func main() {
 	fmt.Println("Area of square : ", as)
 	fmt.Println("Area of Rectangle : ", ar)
 
+	fmt.Println("\n---q4---")
+	x := numval(10)
+	y := numval(20)
+	res := x.mult(y)
+	fmt.Println(res)
+
 	fmt.Println("\n---q5---")
 	var num1 int = 6
 	var num2 int = 9
@@ -43,6 +51,10 @@ func swap(a *int, b *int) {
 
 func area(l int, b int) (int, int) {
 	return l * l, l * b
+}
+
+func (d1 numval) mult(d2 numval) numval {
+	return d1 * d2
 }
 
 func vadd(nums ...int) int {
