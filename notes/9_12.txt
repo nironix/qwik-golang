@@ -1,0 +1,73 @@
+STRUCTURE AND MAPS
+
+STRUCTURE // similar to class
+	->ANONYMOUS STRUCTURE
+<name> struct
+
+
+MAPS //key-value pair,hash table,
+	->
+ 
+STRUCTURE
+eg::
+type intro struct {
+	name string
+	age  int
+}
+
+y:= intro{"ww",15}
+
+NESTED STRUCTURE
+
+type inn struct{
+	det intro
+	id int
+}
+
+x:=inn{intro{"ww",11},15,}
+
+ANONYMOUS STRUCTURE
+
+TYPE 1
+
+t := struct {
+		a int
+		b int
+	}{
+		5, 10,
+	}
+
+TYPE 2
+
+type tt struct{
+	int
+	string
+	bool
+}
+
+MAPS
+
+mapp := map[int]string{
+		1: "mee",
+		2: "hddhd",
+	}
+	mapp[3] = "jdjd"
+	fmt.Println(mapp)
+	
+	//to delete 
+	delete(mapp, 2)   /// delete(map_name,key)
+
+type sal func (int,int,int)int
+func (a int, b int)int{
+return a*b
+}
+	
+ASSIGNMENT
+1) Use a struct call to initalize length and breadth, Find area of rectangle using these parameter.
+2) Use nested struct initalize employee data to have salary array from 3 months with Basic, HRA and TA. Print each month salary.
+3) Consume inpu parameter from use and Pass structure as argument to function and print data provided by user.
+4) Create a map with 10 values of type map[string]string. Assign Key as animal type and value as name. Count the number of animals in each category and print.
+
+
+
+

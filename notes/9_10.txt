@@ -10,3 +10,10 @@ n := copy(s, arr)
 
 sort.Ints(arr)//sorting an array
 bytes.Trim([]byte(str),"-") //remove "-" from the string at begining and ending
+
+ASSIGNMENT
+
+1) Take INT input from user as length, Declare array of user input length, add 50 to each index position.
+2) Intialize a slice with INT data and arrange the slice in ascending order.
+3) Intialize a slice and return only even numbers in slice as output.
+4) Implement search implentation in array and slice.
