@@ -1,4 +1,4 @@
-=>ARRAY
+=>ARRAY and SLICE
 arr := [len]<type>{1,2,3,...}
 
 var arr_name[len]type

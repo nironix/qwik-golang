@@ -1,0 +1,38 @@
+OOPS IN GO
+	ENCAPSULATION
+	POLYMORPHISM
+	INHERITANCE
+
+JSON DATA(JavaScript Object Notation)
+	aa, _ := json.Marshal(mapp) //map to json
+		//mapp->map structure
+		
+	type tt struct {
+	A int
+	B string `json:"nn"`//to give a name in json
+	C int
+	}
+
+	att := tt{1, "2", 3}
+	btt, _ := json.Marshal(att)//structure to json
+		//att->struct
+	RULE : Key must start with Upperase Letter
+
+		//make the json store in a format
+	btt, _ := json.MarshalIndent("<struct/map>", "<begin of line>", "</t/n>")
+	
+	UNMARSHAL //json to struct/map
+	e = json.Unmarshal([]byte(btt), &jss)
+	
+FILES
+
+fc, oc := os.Create("lo.txt")//create a file
+	if oc != nil {
+		fmt.Println("fail")
+	}
+	
+fc, oc := ioutil.ReadFile("lo.txt")//Read a file
+	fmt.Println(string(fc))
+
+oo := ioutil.WriteFile("lo.txt", []byte(s), 8522)//write a file
+	fmt.Println(oo)
