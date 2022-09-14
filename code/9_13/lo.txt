@@ -1,1 +1,1 @@
-lalal%ahiyfiyl
+{"name":"niro","age":22,"id":110,"salary":{"basic":25000,"hra":2000,"da":3000}}
