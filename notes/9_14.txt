@@ -1,0 +1,23 @@
+CONCURRENCY  //similar to thread
+	
+	GO routine  //managed by inbuilt system
+	its a Software based
+	faster than thread 
+
+go fname()//calling a function as go routine
+
+ time.Sleep(1 * time.Second) //important to run go routine 
+
+ANONYMOUS go routine
+
+go func(){
+....
+}()          ///created inside main 
+
+select {
+	case op1 := <-res1:
+		fmt.Println(op1)
+	case op2 := <-res2:
+		fmt.Println(op2)
+	}
+	//gets first output from go routine

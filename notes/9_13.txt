@@ -36,3 +36,7 @@ fc, oc := ioutil.ReadFile("lo.txt")//Read a file
 
 oo := ioutil.WriteFile("lo.txt", []byte(s), 8522)//write a file
 	fmt.Println(oo)
+
+ASSIGNMENT
+1) Write a sample code to implement OOP's concepts
+2) Write, Read and update json data into file, Print the response at each stage.
