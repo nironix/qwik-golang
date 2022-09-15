@@ -21,3 +21,9 @@ select {
 		fmt.Println(op2)
 	}
 	//gets first output from go routine
+	
+ASSIGNMENT
+
+1) Take an slice of INT as input and print the value in slice is Even or odd using Channels and go func.
+2) Use Select channels, write a program to wait for 20 seconds and print output as Signal received once 20 seconds is done. Until 20 seconds, use Print as Signal not received
+3) Use Select channels, write a program to get response from random servers.  // 2 channels 

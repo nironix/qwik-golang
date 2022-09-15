@@ -1,0 +1,34 @@
+INTERFACE
+
+type interface_name interface{
+
+}
+
+type definter interface {
+	meth1() int
+	//meth2() string
+}
+
+func (m val) meth1() int {//func declaration
+	return m.val1 + m.val2
+}
+
+type val struct {
+	val1 int
+	val2 int
+}
+	
+	//create an interface,struct to store the data and func 
+	var m definter
+	m = val{10, 20}
+	fmt.Println(m.meth1())
+	
+ERROR
+s, e := sqr(-5)
+	if e != nil {
+		fmt.Println("error : ", e)
+func sqr(val float64) (float64, error) {
+return 0, errors.New("Negative number")
+	
+defer <func call> //makes the function call at the end of function in which it is called
+	
