@@ -1,0 +1,50 @@
+STRINGS
+
+String literal("str") : supports \n \t and gives indentation to text
+Raw literal ('str'):does not support \n \t etc. just as text
+
+
+length of string => len(str)
+
+COMPARE
+ using ==,<,> //return true or false
+
+ using strings.Compare(str1,str2) //uses ASCII value
+return
+	0 => str1 and str2 is equal
+	1 =>if str1 is large
+	-1 => if str2 is large
+	
+CONCAT STRINGS
+	use "str" + "str"
+	res := fmt.Sprintf("%s %s", str, str) // returns the string value
+	strings.Join(arr, " ") //joins string array with given seperator
+	
+TRIM
+	strings.TrimLeft(str, "$") //trims the given char on left end
+	strings.TrimRight(str, "$")//trims the given char on Right end
+	strings.Trim(str, "$")//trims the given char on both ends
+	strings.TrimSpace(str) // trims the spaces on both ends
+	strings.TrimPrefix(str, "ho")//trims given string if in begining
+	strings.TrimSuffix(str, "bye")//trims given string if in end
+	
+SPLIT
+	strings.Split(str, " ")//returns an array by splitting the string based on seperator
+
+CONTAINS
+	strings.Contains(str, str1)//returns true/false if str1 exists in str
+	
+COUNT
+	strings.Count(str, str1) //returns no of occurance of str1 in str
+
+REPEAT
+	strings.Repeat(str, count) //return str count times
+	
+INDEX	
+	strings.Index(str, str1) //returns index/begining of str1's first occurance in str
+	
+REGEX
+	re := regexp.MustCompile(".com")
+	re.FindString("niro@vit.com")//returns the re if exist
+	re := regexp.MustCompile("a([a-z]+)") //string must start with a continued by lowercase and ends with blank space 
+	re.FindStringSubmatch("alphabet")// returns [alphabet lphabet] selected substring and matching content
