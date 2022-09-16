@@ -32,3 +32,4 @@ return 0, errors.New("Negative number")
 	
 defer <func call> //makes the function call at the end of function in which it is called
 	
+ASSIGNMENT
