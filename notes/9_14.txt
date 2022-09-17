@@ -22,6 +22,9 @@ select {
 	}
 	//gets first output from go routine
 	
+buffered channel => bu := make(chan string,2) // doesnt need a go routine
+unbuffered channel => bu := make(chan string) //  need a go routine
+	
 ASSIGNMENT
 
 1) Take an slice of INT as input and print the value in slice is Even or odd using Channels and go func.

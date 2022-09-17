@@ -1,0 +1,55 @@
+CORE PACKAGES
+
+STRINGS
+HASH
+BYTE
+REFLECT  
+SPLIT
+	b := []byte("lala lala")
+	s := bytes.Split(b, []byte('l'))//splits the byte array using the seperator
+
+JOIN
+	j := bytes.Join(s, []byte("**"))//join the byte 2D array into a byte array using seperator
+	
+LIST
+	var x list.List //declare a list
+	
+	x.PushBack(1)//push at end
+	x.PushFront(8)//push at front
+	for i := x.Front(); i != nil; i = i.Next() { //to print the list
+		fmt.Println(i.Value)
+	}
+
+IOUTIL
+	refer 9_13 
+	
+MATH
+	math.Sqrt(n)//returns square root of n
+	math.Pow(n,m) //returns n power m
+	math.Pow10(n)//returns n power 10
+	
+SORT
+	sort.Sort(sort.IntSlice(arr))//sort in ascending order
+	sort.Sort(sort.Reverse(sort.IntSlice(arr)))//sort in descending order
+	
+TIME
+	time.Sleep(time.Second * 2) //sleep for 2 seconds
+	
+	tl, _ := time.Parse(time.RFC3339, "2022-01-02T12:22:22Z")  //convert from one time zone time to another
+	loc, _ := time.LoadLocation("America/Los_Angeles")
+	tl = tl.In(loc)
+	fmt.Println(tl.Format(time.RFC822))
+
+STRCONV
+		var ss string = strconv.FormatBool(b) // converts other data type to string
+		strconv.Atoi("135")//using ASCII values
+		strconv.ParseFloat("1.23",64)
+
+
+ENCODING
+	da := "lalalal"
+	se := base64.StdEncoding.EncodeToString([]byte(da))
+	fmt.Println(se)
+
+	de, _ := base64.StdEncoding.DecodeString(se)
+	fmt.Println(string(de))
