@@ -1,0 +1,57 @@
+TESTING 
+
+try.go
+	func main() {
+		Reval()
+		//fmt.Println(a)
+	}
+
+	func Reval() string {
+		return "hey"
+	}
+
+try_test.go
+	import (
+		"testing"
+	)
+
+	func TestReval(t *testing.T) {
+		str := Reval()
+		stre := "hey"
+		if str != stre {
+			t.Error("nope " + str)
+		}
+	}
+
+HTTP
+	import "net/http"
+	res, err := http.Get("https://google.com")
+	defer res.Body.Close()
+	fmt.Println("response ", res.Status)
+	sc := bufio.NewScanner(res.Body)
+	for i := 0; sc.Scan() && i < 5; i++ {
+		fmt.Println(sc.Text())
+	}
+
+	fil := http.FileServer(http.Dir("D:/GoLang/qwik-golang/code/9_19/page/stat"))
+	http.Handle("/stat", fil) //to display an web page
+	
+	http.HandleFunc("/hello", helloHandler)
+	fmt.Println("started at 8090....")
+	if err := http.ListenAndServe(":8090", nil); err != nil {
+		fmt.Println("err : ", err)
+	}
+	
+	//function to handle 
+	func helloHandler(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/hello" {
+		//http.Error(w, "404", http.StatusNotFound)
+		return
+	}
+	if r.Method != "GET" {
+		http.Error(w, "no", http.StatusNotFound)
+		return
+	}
+	fmt.Fprintln(w, "we are in")
+	}
+

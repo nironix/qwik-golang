@@ -5,6 +5,7 @@ import (
 	"math"
 	"reflect"
 	"sort"
+	"strconv"
 )
 
 type t struct {
@@ -22,9 +23,9 @@ func main() {
 	sort.Sort(sort.Reverse(sort.IntSlice(s)))
 	fmt.Println(s)
 
-	var b string = "123"
+	var b bool = true
 	fmt.Println(reflect.TypeOf(b), " ", b)
-	var ss int = int(b)
+	var ss string = strconv.FormatBool(b)
 	fmt.Println(reflect.TypeOf(ss), " ", ss)
 
 }
