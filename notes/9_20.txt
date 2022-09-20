@@ -1,0 +1,24 @@
+DYNAMIC WEB PAGE
+
+func formhandler(w http.ResponseWriter, r *http.Request) {
+	if err := r.ParseForm(); err != nil {
+		fmt.Println(err)
+		return
+	}
+	iname := r.FormValue("name")
+	iage := r.FormValue("age")
+	iorg := r.FormValue("org")
+	iaddr := r.FormValue("addr")
+	fmt.Fprintln(w, "name : ", iname, "\nage : ", iage,
+		"\norg : ", iorg, "\naddress : ", iaddr)
+}
+
+MONGO DB
+
+	use data //create new database and work there
+	show dbs //display existing db
+	db.data.insert({"_id":"1234","name":"niran","age":21,"address":"vellore"})//insert data
+	db.data1.find()//display all data
+	db.data.update({"_id":"1234"},{$set:{"age":22}})//update the data
+	db.data.remove({"_id":"1234"})//display all data
+	db.dropDatabase() //deletes the current working db
