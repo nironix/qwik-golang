@@ -1,0 +1,71 @@
+Mongo with Go
+
+//to connect with mongo db
+	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI("mongodb://localhost:27017"))
+	
+	if err != nil {
+		fmt.Println("error", err)
+
+	}
+	fmt.Println(client)
+	
+	// to connect with the db and collection
+	uc := client.Database("UserDB").Collection("usrc")
+	
+//insert single data
+	user := bson.D{{"name", "niro"}, {"age", 21}}
+	res, err := uc.InsertOne(context.TODO(), user) // data entry
+	if err != nil {
+		fmt.Println("error", err)
+
+	}
+	fmt.Println(res.InsertedID)
+
+//insert multiple data
+	urs := []interface{}{
+		bson.D{{"name", "niran"}, {"age", 22}},
+		bson.D{{"name", "niranjan"}, {"age", 22}},
+	}
+	ress, err := uc.InsertMany(context.TODO(), urs)// data entry
+	if err != nil {
+		fmt.Println("error", err)
+
+	}
+	fmt.Println(ress.InsertedIDs)
+
+//diaplay all
+	if err := rd.All(context.TODO(), &res); err != nil {
+		fmt.Println(err)
+	}
+
+	for _, d := range res {
+		fmt.Println(d)
+	}
+
+//diaplay selected statements
+	fil := bson.D{{"name", "niro"}}
+	rf, err := uc.Find(context.TODO(), fil)
+
+	if err := rf.All(context.TODO(), &res); err != nil {
+		fmt.Println(err)
+	}
+	for _, d := range res {
+		fmt.Println(d)
+	}
+
+//displaying one record
+	var res3 bson.M
+	if err := uc.FindOne(context.TODO(), fil).Decode(&res3); err != nil {
+		fmt.Println(err)
+	}
+
+//updating 
+	uf := bson.D{{"$set", bson.D{{"name", "nix"}}}}
+	ru, err := uc.UpdateOne(context.TODO(), bson.D{{"age", 21}}, uf)
+	fmt.Println(ru.ModifiedCount)
+
+// deletion
+	dr, err := uc.DeleteOne(context.TODO(), bson.D{{"name", "niranjan"}})
+	fmt.Println(dr.DeletedCount) 
+
+
