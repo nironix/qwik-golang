@@ -1,0 +1,6 @@
+REST API (JSON format)
+	->type of Architecture, for communication between client and server
+SOAP (in XML format)
+
+
+refer code for creating REST API with CRUD using MongoDB
