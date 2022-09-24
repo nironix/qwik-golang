@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"html/template"
 	"net/http"
+	"strconv"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -54,8 +55,9 @@ func delete(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Fprintln(w, "Deleted documents : ", del.DeletedCount)
-
+	//fmt.Fprintln(w, "Deleted documents : ", del.DeletedCount)
+	myvar := map[string]interface{}{"res": "Deleted Documents " + strconv.FormatInt(int64(del.DeletedCount), 10), "head": "DELETING RECORD"}
+	outputHTML(w, "page/result.html", myvar)
 }
 
 func update(w http.ResponseWriter, r *http.Request) {
@@ -70,8 +72,10 @@ func update(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(err)
 
 	}
-	fmt.Fprintln(w, "Updated documents : ", ru.ModifiedCount)
+	//fmt.Fprintln(w, "Updated documents : ", ru.ModifiedCount)
 
+	myvar := map[string]interface{}{"res": "Updated Documents " + strconv.FormatInt(int64(ru.ModifiedCount), 10), "head": "UPDATING RECORD"}
+	outputHTML(w, "page/result.html", myvar)
 }
 
 func read(w http.ResponseWriter, r *http.Request) {
@@ -96,9 +100,9 @@ func read(w http.ResponseWriter, r *http.Request) {
 		res = append(res, r)
 
 	}
-	fmt.Fprintln(w, res)
-	myvar := map[string]interface{}{"MyVar": "SUCCESS"}
-	outputHTML(w, "/result.html", myvar)
+	//fmt.Fprintln(w, res)
+	myvar := map[string]interface{}{"res": "Displaying data of " + r.FormValue("name"), "head": "READING RECORD"}
+	outputHTML(w, "page/result.html", myvar)
 }
 func create(w http.ResponseWriter, r *http.Request) {
 	if err := r.ParseForm(); err != nil {
@@ -126,13 +130,14 @@ func create(w http.ResponseWriter, r *http.Request) {
 	//st :=[]interface{}{ bson.D{{"name", iname}, {"age", iage}, {"email", iem}, {"addr", iaddr}, {"qual", iqual}, {"fn", ifb}}}
 	//st=toDoc(f)
 	//fmt.Println(f)
-	res, err := uc.InsertOne(cntx, f)
+	_, err := uc.InsertOne(cntx, f)
 	if err != nil {
 		fmt.Println("error", err)
 	}
 
-	fmt.Fprintln(w, res.InsertedID)
-
+	//fmt.Fprintln(w, res.InsertedID)
+	myvar := map[string]interface{}{"res": "Inserted Documents ", "head": "DELETING RECORD"}
+	outputHTML(w, "page/result.html", myvar)
 }
 
 func outputHTML(w http.ResponseWriter, filename string, data interface{}) {
